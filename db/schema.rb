@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_113024) do
     t.text "original_url"
     t.string "short_url"
     t.string "sanitize_url"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_shortened_urls_on_user_id"

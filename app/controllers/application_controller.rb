@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
 
     include Authenticable
 
+
+    
+
   
     # def test
     #   render json: { message: 'OK' }, status: :ok

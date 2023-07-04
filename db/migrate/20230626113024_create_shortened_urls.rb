@@ -4,7 +4,7 @@ class CreateShortenedUrls < ActiveRecord::Migration[7.0]
       t.text :original_url
       t.string :short_url
       t.string :sanitize_url
-      t.belongs_to :user, null: false, foreign_key: true
+      t.belongs_to :user, null: true, foreign_key: true
 
       t.timestamps
     end

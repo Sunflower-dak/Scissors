@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
 
-    has_many :shortened_urls
+    has_many :shortened_url, dependent: :destroy
 
     validates :first_name, :last_name, :email, :phone, presence: true
     validates :email, presence: true, uniqueness: true
