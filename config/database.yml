@@ -81,7 +81,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
   database: scissors_production
   username: scissors
   password: <%= ENV["SCISSORS_DATABASE_PASSWORD"] %>
