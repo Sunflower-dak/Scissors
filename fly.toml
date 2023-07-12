@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for bio-scissor-api on 2023-07-12T18:27:23Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "bio-scissor-api"
+primary_region = "ams"
+console_command = "/rails/bin/rails console"
+
+[env]
+  PORT=8080
+
+[deploy]
+  release_command = "bundle exec rails db:migrate"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running
+
