@@ -23,6 +23,6 @@ COPY . /app/
 
 RUN bundle exec bootsnap precompile --gemfile
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
