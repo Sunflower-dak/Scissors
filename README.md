@@ -2,7 +2,10 @@ Scissor API - Documentation
 
 API Overview.
 
-Scissor is a simple tool which makes URLs as short as possible. : Its implemented in REST. The APIs allow users to create a short link for a url as well as resolve it. The APIs also allow users to perform account-related operations such as creating a new account, logging in with existing credentials, and logging out of the current session.
+Scissor is a simple tool which makes URLs as short as possible. : Its implemented in REST. 
+The APIs allow users to create a short link for a url as well as resolve it. The APIs also allow users 
+to perform account-related operations such as creating a new account, logging in with existing credentials, 
+and logging out of the current session.
 
 Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -24,7 +27,8 @@ rails db:create
 rails db:migrate
 
 Scissors
-The REST API follows a traditional RESTful architecture and uses HTTP verbs to interact with resources. It supports the following endpoints:
+The REST API follows a traditional RESTful architecture and uses HTTP verbs to interact with resources. 
+It supports the following endpoints:
 
 
 GET
