@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_113024) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_112826) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "shortened_urls", force: :cascade do |t|
-    t.text "original_url"
-    t.string "short_url"
-    t.string "sanitize_url"
-    t.bigint "user_id"
+  create_table "urls", force: :cascade do |t|
+    t.string "original_url"
+    t.string "shortened_url"
+    t.string "title"
+    t.string "description"
+    t.integer "views_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_shortened_urls_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,5 +36,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_113024) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "shortened_urls", "users"
 end

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         post 'login', to: 'sessions#login'
       end
       resources :users
+      resources :urls
     end
   end
 end
