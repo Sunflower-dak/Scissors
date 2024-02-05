@@ -27,6 +27,16 @@ class API::V1::UrlsController < ApplicationController
     redirect_to URI::HTTP.build(host: corrected_url).to_s, allow_other_host: true
   end
 
+  def url_stats
+    @url = Url.find_by!(short_code: params[:short_code])
+
+    if @url
+      render json: { number_of_times_visted: @url.count }, status: :ok
+    else
+      render json: { errors: "URL not found" }, status: :not_found
+    end
+  end
+
   private
 
   def url_params

@@ -9,4 +9,8 @@ class Url < ApplicationRecord
   def shortener
     self.short_code ||= SecureRandom.hex(3)
   end
+
+  def total_visit_count
+    self.sum(:count)
+  end
 end

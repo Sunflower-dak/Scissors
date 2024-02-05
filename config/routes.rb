@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :users
       post "/shorten", to: "urls#create"
       get "/:short_code", to: "urls#redirect"
+      get "/:stats", to: "urls#url_stats"
     end
   end
 end
