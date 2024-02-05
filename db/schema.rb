@@ -15,7 +15,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_112826) do
   enable_extension "plpgsql"
 
   create_table "urls", force: :cascade do |t|
-    t.string "url"
+    t.string "original_url"
+    t.string "short_code"
+    t.string "short_url"
     t.string "title"
     t.string "description"
     t.integer "views_count", default: 0

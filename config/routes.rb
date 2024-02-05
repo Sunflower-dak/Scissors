@@ -10,7 +10,8 @@ Rails.application.routes.draw do
         post 'login', to: 'sessions#login'
       end
       resources :users
-      resources :urls
+      post "/shorten", to: "urls#create"
+      get "/:short_code", to: "urls#redirect"
     end
   end
 end
