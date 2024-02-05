@@ -2,5 +2,9 @@ class Url < ApplicationRecord
 
   scope :recent_first, -> { order(created_at: :desc) }
 
-  validates :original_url, presence: true
+  validates :url, presence: true
+
+  def shortener
+    SecureRandom.hex(6)
+  end
 end
